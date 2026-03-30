@@ -1,0 +1,64 @@
+<app-navbar></app-navbar>
+
+<div class="history-page">
+
+  <!-- 🔥 TOP TABS -->
+  <div class="tabs">
+
+    <button 
+      *ngFor="let op of operations"
+      class="tab-btn"
+      [class.active]="selectedOperation === op.type"
+      (click)="selectOperation(op.type)">
+
+      {{ op.emoji }} {{ op.title }}
+
+    </button>
+
+  </div>
+
+  <!-- 🔥 CONTENT -->
+  <div class="content">
+
+    <h5 class="content-title">
+      📜 {{ selectedOperation }} History
+    </h5>
+
+    <div *ngIf="loading" class="loading">Loading...</div>
+
+    <div *ngIf="!loading && history().length === 0" class="empty">
+      No history found
+    </div>
+
+    <div class="history-list">
+
+      <div 
+        *ngFor="let item of history()"
+        class="history-card"
+        [class.error]="item.error">
+
+        <div class="top">
+          <span class="badge">{{ item.operation }}</span>
+        </div>
+
+        <div class="details">
+          {{ item.thisValue }} {{ item.thisUnit }}
+          →
+          {{ item.resultValue }} {{ item.resultUnit }}
+        </div>
+
+        <div class="meta">
+          {{ item.resultMeasurementType }}
+        </div>
+
+        <div *ngIf="item.error" class="error-text">
+          {{ item.errorMessage }}
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>

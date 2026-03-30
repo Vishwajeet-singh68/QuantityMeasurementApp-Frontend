@@ -1,0 +1,79 @@
+/* Container */
+.operation-container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* Box */
+.operation-box {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+/* Title */
+.title {
+  text-align: center;
+  margin-bottom: 25px;
+  font-weight: 600;
+  color: #444;
+}
+
+/* Grid */
+.operation-grid {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Card */
+.operation-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 240px;
+  padding: 15px;
+  border-radius: 12px;
+  border: 1px solid #eee;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  background: #fafafa;
+}
+
+/* Icon */
+.operation-card .icon {
+  font-size: 22px;
+}
+
+/* Text */
+.operation-card h6 {
+  margin: 0;
+  font-weight: 600;
+}
+
+.operation-card p {
+  margin: 0;
+  font-size: 12px;
+  color: #777;
+}
+
+/* Hover */
+.operation-card:hover {
+  background: #f1f5ff;
+  border-color: #0d6efd;
+  transform: translateY(-3px);
+}
+
+/* Active */
+.operation-card.active {
+  background: #0d6efd;
+  color: white;
+  border-color: #0d6efd;
+}
+
+.operation-card.active p {
+  color: #ddd;
+}

@@ -1,0 +1,131 @@
+/* Navbar base */
+.custom-navbar {
+  padding: 12px 20px;
+  backdrop-filter: blur(12px);
+  background: rgba(102, 126, 234, 0.7); /* matches your auth gradient */
+  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+/* Brand */
+.brand {
+  font-weight: 700;
+  font-size: 20px;
+  color: white;
+  letter-spacing: 0.5px;
+}
+
+/* Nav links */
+.nav-link-custom {
+  color: white !important;
+  font-weight: 500;
+  padding: 8px 14px;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.nav-link-custom:hover {
+  background: rgba(255,255,255,0.2);
+  transform: translateY(-2px);
+}
+
+/* User box */
+.user-box {
+  padding: 5px 10px;
+  border-radius: 30px;
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(10px);
+  transition: 0.3s;
+}
+
+.user-box:hover {
+  background: rgba(255,255,255,0.25);
+}
+
+/* Avatar */
+.avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: linear-gradient(45deg, #ff9a9e, #fad0c4);
+  color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  margin-right: 8px;
+  font-size: 14px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* Username */
+.username {
+  color: white;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+/* Toggle icon fix */
+.navbar-toggler {
+  border: none;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+/* History Button */
+.history-btn {
+  background: linear-gradient(45deg, #ff9a9e, #fad0c4);
+  border: none;
+  color: #333;
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: 20px;
+  transition: 0.3s;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* Hover effect */
+.history-btn:hover {
+  transform: translateY(-2px) scale(1.05);
+  background: white;
+  color: #333;
+}
+
+/* Active click */
+.history-btn:active {
+  transform: scale(0.95);
+}
+
+/* Dropdown */
+.dropdown-menu-custom {
+  position: absolute;
+  top: 50px;
+  right: 0;
+  width: 180px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  overflow: hidden;
+  z-index: 1000;
+}
+
+.dropdown-item {
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.dropdown-item:hover {
+  background: #f5f7fb;
+}
+
+.dropdown-item.disabled {
+  font-weight: 600;
+  cursor: default;
+}
+
+.dropdown-item.logout {
+  color: red;
+}

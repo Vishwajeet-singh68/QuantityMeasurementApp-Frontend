@@ -1,0 +1,68 @@
+<nav class="navbar custom-navbar navbar-expand-lg">
+
+  <div class="container-fluid">
+
+    <!-- Logo -->
+    <a class="navbar-brand brand">
+      🚀 Quantity App
+    </a>
+
+    <!-- Toggle -->
+    <button 
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarContent">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Right -->
+    <div class="collapse navbar-collapse justify-content-end" id="navbarContent">
+
+      <ul class="navbar-nav align-items-center gap-3">
+
+        <!-- History -->
+        <li class="nav-item">
+          <a class="btn history-btn" routerLink="/history">
+            📜 History
+          </a>
+        </li>
+
+        <!-- 🔥 Profile Section -->
+        <li class="nav-item position-relative">
+
+          <!-- Clickable Profile -->
+          <div 
+            class="d-flex align-items-center user-box"
+            (click)="toggleDropdown()">
+
+            <!-- Avatar -->
+            <div class="avatar">
+              {{ username.charAt(0).toUpperCase() }}
+            </div>
+
+            <!-- Username -->
+            <span class="username">
+              {{ username }}
+            </span>
+
+          </div>
+
+          <!-- 🔽 Dropdown -->
+          <div class="dropdown-menu-custom" *ngIf="showDropdown">
+
+            <div class="dropdown-item logout" (click)="logout()">
+              🚪 Logout
+            </div>
+
+          </div>
+
+        </li>
+
+      </ul>
+
+    </div>
+
+  </div>
+
+</nav>

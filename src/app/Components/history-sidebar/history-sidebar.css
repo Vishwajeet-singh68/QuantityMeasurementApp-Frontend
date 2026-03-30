@@ -1,0 +1,97 @@
+/* Page */
+.history-page {
+  max-width: 1100px;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+/* Tabs container */
+.tabs {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+/* Tab button */
+.tab-btn {
+  padding: 10px 18px;
+  border-radius: 25px;
+  border: none;
+  background: #f1f5ff;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.25s;
+}
+
+/* Hover */
+.tab-btn:hover {
+  background: #e0e7ff;
+}
+
+/* Active tab */
+.tab-btn.active {
+  background: #0d6efd;
+  color: white;
+  box-shadow: 0 5px 15px rgba(13,110,253,0.3);
+}
+
+/* Content */
+.content {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+}
+
+/* Title */
+.content-title {
+  margin-bottom: 15px;
+}
+
+/* Cards */
+.history-card {
+  background: #f8f9fa;
+  padding: 12px;
+  border-radius: 10px;
+  margin-bottom: 12px;
+  border-left: 4px solid #0d6efd;
+}
+
+/* Error */
+.history-card.error {
+  border-left: 4px solid red;
+  background: #ffe5e5;
+}
+
+/* Badge */
+.badge {
+  background: #eee;
+  padding: 3px 8px;
+  border-radius: 6px;
+  font-size: 12px;
+}
+
+/* Details */
+.details {
+  font-weight: 500;
+}
+
+/* Meta */
+.meta {
+  font-size: 12px;
+  color: #777;
+}
+
+/* Loading */
+.loading {
+  text-align: center;
+  margin: 20px;
+}
+
+/* Empty */
+.empty {
+  text-align: center;
+  color: #999;
+}
