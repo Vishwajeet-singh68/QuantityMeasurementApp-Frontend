@@ -1,0 +1,35 @@
+<div class="operation-container">
+
+  <div class="operation-box">
+
+    <h5 class="title">Choose Operation</h5>
+
+    <div class="operation-grid">
+
+      <div 
+        *ngFor="let op of operations"
+        class="operation-card"
+        [class.active]="selectedOperation === op.type"
+        (click)="selectOperation(op.type)"
+        [hidden]="selectedType === 'TemperatureUnit' && (op.type === 'add' || op.type === 'subtract' || op.type === 'divide')">
+
+        <div class="icon">{{ op.emoji }}</div>
+
+        <div class="text">
+          <h6>{{ op.title }}</h6>
+          <p>{{ getDescription(op.type) }}</p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <app-input-panel
+    *ngIf="selectedOperation"
+    [operation]="selectedOperation"
+    [type]="selectedType">
+  </app-input-panel>
+
+</div>

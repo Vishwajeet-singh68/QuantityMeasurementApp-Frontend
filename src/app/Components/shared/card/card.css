@@ -1,0 +1,21 @@
+.selectable-card {
+  cursor: pointer;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  background-color: #f8f9fa;
+}
+
+.selectable-card:hover {
+  transform: translateY(-5px);
+}
+
+.active-card {
+  border-color: #0d6efd;
+  background-color: #e7f1ff;
+  color: #0d6efd;
+}
+
+.emoji {
+  font-size: 40px;
+}

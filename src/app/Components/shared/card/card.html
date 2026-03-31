@@ -1,0 +1,10 @@
+<div 
+  class="card text-center selectable-card"
+  [class.active-card]="selectedType === type"
+  (click)="selectCard()"
+>
+  <div class="card-body">
+    <div class="emoji">{{ emoji }}</div>
+    <h6 class="fw-semibold mt-2">{{ title }}</h6>
+  </div>
+</div>

@@ -1,0 +1,69 @@
+<div class="calc-container">
+
+  <!-- 🔄 CONVERSION -->
+  <div *ngIf="operation === 'conversion'" class="calc-row">
+
+    <!-- INPUT -->
+    <div class="panel">
+      <label>Input</label>
+      <input type="number" placeholder="Enter value" [(ngModel)]="value1">
+      <select [(ngModel)]="unit1">
+        <option *ngFor="let u of units">{{ u }}</option>
+      </select>
+    </div>
+
+    <!-- ACTION -->
+    <button class="action-btn" (click)="sendData()">Convert</button>
+
+    <!-- OUTPUT -->
+    <div class="panel result-panel">
+      <label>Result</label>
+      <input type="text" [(ngModel)]="result" readonly placeholder="Result">
+      <select [(ngModel)]="targetUnit">
+        <option *ngFor="let u of units">{{ u }}</option>
+      </select>
+    </div>
+
+  </div>
+
+  <!-- ➕ ➖ -->
+  <div *ngIf="operation !== 'conversion'" class="calc-row">
+
+    <!-- INPUT 1 -->
+    <div class="panel">
+      <label>First</label>
+      <input type="number" placeholder="Enter value" [(ngModel)]="value1">
+      <select [(ngModel)]="unit1">
+        <option *ngFor="let u of units">{{ u }}</option>
+      </select>
+    </div>
+
+    <!-- SYMBOL -->
+    <div class="symbol">
+      {{ operation === 'add' ? '+' : operation === 'subtract' ? '-' : '/' }}
+    </div>
+
+    <!-- INPUT 2 -->
+    <div class="panel">
+      <label>Second</label>
+      <input type="number" placeholder="Enter value" [(ngModel)]="value2">
+      <select [(ngModel)]="unit2">
+        <option *ngFor="let u of units">{{ u }}</option>
+      </select>
+    </div>
+
+    <!-- ACTION -->
+    <button class="action-btn" (click)="sendData()">Calculate</button>
+
+    <!-- OUTPUT -->
+    <div class="panel result-panel">
+      <label>Result</label>
+      <input type="text" [(ngModel)]="result" readonly placeholder="Result">
+      <select [(ngModel)]="targetUnit">
+        <option *ngFor="let u of units">{{ u }}</option>
+      </select>
+    </div>
+
+  </div>
+
+</div>
