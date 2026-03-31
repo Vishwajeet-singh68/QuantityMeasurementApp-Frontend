@@ -46,7 +46,7 @@ export class HistorySidebarComponent implements OnInit {
     this.loading = true;
 
     this.http.get<any[]>(
-      `http://localhost:8080/api/quantities/history/operation/${this.selectedOperation}`,{ headers }
+      `http://ec2-13-233-198-26.ap-south-1.compute.amazonaws.com:8080/api/quantities/history/operation/${this.selectedOperation}`,{ headers }
     ).subscribe({
       next: (res) => this.history.set(res),
       error: (err) => console.error(err),

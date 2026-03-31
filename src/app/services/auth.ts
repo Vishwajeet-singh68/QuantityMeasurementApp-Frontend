@@ -6,7 +6,7 @@ import { jwtDecode } from 'jwt-decode';
 @Injectable({ providedIn: 'root' })
 export class AuthService {
 
-  private baseUrl = 'http://localhost:8080/auth';
+  private baseUrl = 'http://ec2-13-233-198-26.ap-south-1.compute.amazonaws.com:8080/auth';
 
   constructor(private http: HttpClient) {}
 

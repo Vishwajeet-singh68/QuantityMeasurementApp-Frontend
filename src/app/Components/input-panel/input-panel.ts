@@ -98,7 +98,7 @@ export class InputPanelComponent implements OnChanges {
     console.log("Sending:", payload);
 
     this.http.post<any>(
-      `http://localhost:8080/api/quantities/${this.operation}`,
+      `http://ec2-13-233-198-26.ap-south-1.compute.amazonaws.com:8080/api/quantities/${this.operation}`,
       payload,
       { headers }   // 👈 add this
     ).subscribe({
